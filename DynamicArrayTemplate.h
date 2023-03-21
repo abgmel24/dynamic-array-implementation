@@ -27,14 +27,10 @@ class ArrayList {
 
         T remove(int index) {
             if(isEmpty()) {
-                std::cout << "Cannot remove from an empty ArrayList" << std::endl;
-                T temp;
-                return temp;
+                throw std::runtime_error("cannot remove from empty dynamic array");
             }
             if(!isInRange(index)) {
-                std::cout <<  "access() cannot access index out of bounds" << std::endl;
-                T temp;
-                return temp;
+                throw std::runtime_error("cannot access index out of bounds");
             }
             T temp = array[index];
             int i = index + 1;
@@ -48,8 +44,7 @@ class ArrayList {
 
         T access(int index) {
             if(!isInRange(index)) {
-                std::cout << "access() cannot access index out of bounds" << std::endl;
-                return;
+                throw std::runtime_error("cannot access index out of bounds");
             }
             return array[index];
         }
@@ -85,6 +80,7 @@ class ArrayList {
             array = arr;
             delete[] arr;
             maxSize *= 2;
+            std::cout << "resizing array" << std::endl;
         }
         bool isInRange(int index) {
             return (index >= 0) && (index <= maxSize);
