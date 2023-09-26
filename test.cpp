@@ -3,7 +3,8 @@ int main(int argc, char **argv) {
     int size = 5;
     ArrayList<int> *list = new ArrayList<int>(5); 
 
-    for(int i = 0; i < size; ++i) { //testing add()
+    //testing add()
+    for(int i = 0; i < size; ++i) { 
         std::cout << "adding " << i << std::endl;
         list->add(i);
         std::cout << "accessing at index " << i << ": " << list->access(i) << std::endl;
@@ -12,7 +13,8 @@ int main(int argc, char **argv) {
     list->printArray();
     std::cout << "Array is full (T/F): " << list->isFull() << std::endl;
 
-    for(int i = 0; i < 5; ++i) { //testing remove() and isEmtpy()
+    //testing remove() and isEmtpy()
+    for(int i = 0; i < 5; ++i) { 
         std::cout << "removing " << list->remove(0) << " at index 0" << std::endl;
     }
     std::cout << "Array: ";

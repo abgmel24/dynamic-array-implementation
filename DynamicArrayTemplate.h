@@ -1,3 +1,4 @@
+//Used this to learn template files and what their syntax looks like
 #ifndef DYNARRAY_H
 #define DYNARRAY_H
 #include <iostream>
