@@ -1,4 +1,5 @@
 //Used this to learn template files and what their syntax looks like
+//Also fixing git authentication issues
 #ifndef DYNARRAY_H
 #define DYNARRAY_H
 #include <iostream>
